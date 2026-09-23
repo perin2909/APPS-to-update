@@ -1,0 +1,190 @@
+/* ========================================================
+   IMPORT CREATIVE GOOGLE FONT
+   Using "Outfit" for a modern, geometric tech look
+   ======================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+/* ========================================================
+   CREATIVE COLOR PALETTE (CSS Variables)
+   Dark theme with vibrant gradients and glass effects
+   ======================================================== */
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    
+    /* Glassmorphism Card Colors */
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-hover-border: rgba(255, 255, 255, 0.2);
+    
+    /* Button Gradients */
+    --btn-update: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    --btn-install: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+    
+    /* Accent color for version numbers */
+    --accent-cyan: #22d3ee;
+}
+
+/* ========================================================
+   General Layout Styles
+   ======================================================== */
+body {
+    font-family: 'Outfit', sans-serif; /* Applied new font */
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-main);
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    margin: 0 0 10px 0;
+    font-size: 36px;
+    font-weight: 700;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes the title text a gradient */
+}
+
+.header p {
+    color: var(--text-muted);
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* ========================================================
+   App Card Styles (Glassmorphism Effect)
+   ======================================================== */
+.update-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.app-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px); /* Blurs the background behind the card */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: 16px; /* Smoother, rounder corners */
+    padding: 22px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Creative Hover Effect */
+.app-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--card-hover-border);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.app-details {
+    flex: 1;
+}
+
+.app-name {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.app-version {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: var(--accent-cyan);
+    font-weight: 400;
+}
+
+.app-description {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+/* Action Area */
+.app-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    min-width: 110px;
+}
+
+.file-size {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================================
+   Creative Button Styles
+   ======================================================== */
+.update-btn {
+    background: var(--btn-update);
+    color: white;
+    border: none;
+    border-radius: 30px; /* Pill-shaped buttons */
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); /* Blue glow */
+}
+
+.update-btn:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+/* ========================================================
+   Suggested Apps Section Styles
+   ======================================================== */
+.suggested-section {
+    margin-top: 60px;
+    border-top: 1px solid var(--card-border);
+    padding-top: 40px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Install Button - Pink/Purple Gradient */
+.install-btn {
+    background: var(--btn-install);
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3); /* Pink glow */
+}
+
+.install-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.5);
+}
